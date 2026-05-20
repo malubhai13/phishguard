@@ -1,4 +1,4 @@
-# PhishGuard API 🛡️
+# PhishGuard API 
 
 A production-grade **ML-powered phishing URL detection service** built with FastAPI, scikit-learn, Docker, and SHAP explainability. Deployed on AWS EC2 with CI/CD via GitHub Actions and real-time monitoring via Prometheus + Grafana.
 
