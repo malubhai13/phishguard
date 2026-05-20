@@ -1,0 +1,12 @@
+# monitoring/prometheus.yml
+# Tells Prometheus where to scrape metrics from
+
+global:
+  scrape_interval:     15s
+  evaluation_interval: 15s
+
+scrape_configs:
+  - job_name: "phishguard-api"
+    static_configs:
+      - targets: ["phishguard-api:8000"]
+    metrics_path: "/metrics"

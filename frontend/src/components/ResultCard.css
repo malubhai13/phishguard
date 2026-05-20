@@ -1,0 +1,112 @@
+.result-card {
+  background: #1e293b;
+  border: 1px solid rgba(148,163,184,0.15);
+  border-radius: 16px;
+  overflow: hidden;
+  margin-top: 1.5rem;
+  animation: slideIn .35s ease;
+}
+@keyframes slideIn { from { opacity:0; transform:translateY(16px); } to { opacity:1; transform:translateY(0); } }
+
+/* header */
+.result-header {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 1.25rem 1.5rem;
+  border-bottom: 1px solid rgba(148,163,184,0.1);
+}
+.rh-left { display: flex; align-items: center; gap: 14px; }
+.rh-icon { font-size: 28px; }
+.rh-verdict { font-size: 18px; font-weight: 700; }
+.rh-risk-label { font-size: 11px; font-weight: 600; letter-spacing: .1em; opacity: .8; margin-top: 2px; }
+.rh-latency { font-size: 12px; color: #64748b; }
+
+/* URL row */
+.result-url-row {
+  display: flex; align-items: flex-start; gap: 12px;
+  padding: 1rem 1.5rem;
+  border-bottom: 1px solid rgba(148,163,184,0.08);
+}
+.result-url-label {
+  font-size: 11px; font-weight: 600; color: #64748b;
+  text-transform: uppercase; letter-spacing: .06em;
+  flex-shrink: 0; padding-top: 2px;
+}
+.result-url {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 13px; color: #cbd5e1;
+  word-break: break-all; line-height: 1.5;
+}
+
+/* body */
+.result-body {
+  display: flex; align-items: flex-start; gap: 1.5rem;
+  padding: 1.5rem;
+  border-bottom: 1px solid rgba(148,163,184,0.08);
+}
+.gauge-wrap { position: relative; flex-shrink: 0; }
+.gauge-center {
+  position: absolute; top: 50%; left: 50%;
+  transform: translate(-50%,-50%);
+  text-align: center; pointer-events: none;
+}
+.gauge-pct { font-size: 26px; font-weight: 700; line-height: 1; }
+.gauge-sub { font-size: 11px; color: #64748b; margin-top: 3px; }
+
+.result-summary { flex: 1; }
+.rs-row {
+  display: flex; justify-content: space-between;
+  padding: 8px 0;
+  border-bottom: 1px solid rgba(148,163,184,0.07);
+  font-size: 13px;
+}
+.rs-row:last-of-type { border-bottom: none; }
+.rs-label { color: #64748b; }
+.rs-val   { font-weight: 500; }
+
+.result-advice {
+  margin-top: 14px; padding: 10px 14px;
+  border-radius: 10px; border: 1px solid;
+  font-size: 13px; line-height: 1.6; color: #cbd5e1;
+}
+
+/* SHAP */
+.shap-section { padding: 1.25rem 1.5rem; border-bottom: 1px solid rgba(148,163,184,0.08); }
+.section-label { font-size: 11px; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; color: #64748b; margin-bottom: 14px; }
+.shap-row { margin-bottom: 14px; }
+.shap-row:last-child { margin-bottom: 0; }
+.shap-left { margin-bottom: 4px; }
+.shap-name { font-size: 13px; font-weight: 500; color: #e2e8f0; text-transform: capitalize; }
+.shap-desc { font-size: 11px; color: #64748b; }
+.shap-right { }
+.shap-val-row { display: flex; justify-content: space-between; font-size: 12px; margin-bottom: 5px; }
+.shap-feature-val { color: #64748b; font-family: 'JetBrains Mono', monospace; }
+.shap-impact { font-weight: 500; }
+.shap-track { height: 5px; background: rgba(148,163,184,0.1); border-radius: 99px; overflow: hidden; }
+.shap-fill  { height: 100%; border-radius: 99px; transition: width .6s ease; }
+
+/* raw */
+.raw-section { padding: 1rem 1.5rem; }
+.raw-toggle {
+  background: none; border: 1px solid rgba(148,163,184,0.15);
+  border-radius: 8px; color: #64748b; font-size: 12px; padding: 6px 14px;
+  transition: all .2s;
+}
+.raw-toggle:hover { border-color: #3b82f6; color: #93c5fd; }
+.raw-json {
+  margin-top: 10px; padding: 14px;
+  background: #0f172a; border-radius: 10px;
+  font-family: 'JetBrains Mono', monospace; font-size: 12px;
+  color: #94a3b8; overflow-x: auto; line-height: 1.6;
+  border: 1px solid rgba(148,163,184,0.1);
+}
+
+/* compact */
+.result-compact {
+  display: flex; align-items: center; gap: 12px;
+  padding: 12px 16px; border-radius: 10px;
+  background: #1e293b; border: 1px solid;
+}
+.rc-icon { font-size: 18px; flex-shrink: 0; }
+.rc-url  { flex: 1; font-size: 13px; color: #94a3b8; font-family: 'JetBrains Mono', monospace; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.rc-label { font-size: 11px; font-weight: 600; letter-spacing: .08em; flex-shrink: 0; }
+.rc-score { font-size: 14px; font-weight: 700; flex-shrink: 0; min-width: 40px; text-align: right; }

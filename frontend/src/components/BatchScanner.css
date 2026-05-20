@@ -1,0 +1,99 @@
+.batch-wrap { display: flex; flex-direction: column; gap: 1rem; }
+.batch-input-card {
+  background: #1e293b; border: 1px solid rgba(148,163,184,0.15);
+  border-radius: 16px; padding: 1.5rem;
+}
+.batch-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 1rem; flex-wrap: wrap; gap: 12px; }
+.batch-title { font-size: 16px; font-weight: 600; color: #f1f5f9; }
+.batch-sub   { font-size: 12px; color: #64748b; margin-top: 3px; }
+.batch-actions { display: flex; gap: 8px; flex-wrap: wrap; }
+
+.btn-primary {
+  display: flex; align-items: center; gap: 6px;
+  padding: 9px 20px; border: none; border-radius: 9px;
+  background: linear-gradient(135deg, #2563eb, #7c3aed);
+  color: #fff; font-size: 13px; font-weight: 600; cursor: pointer;
+  transition: opacity .2s;
+}
+.btn-primary:hover:not(:disabled) { opacity: .85; }
+.btn-primary:disabled { opacity: .45; cursor: not-allowed; }
+.btn-secondary {
+  padding: 9px 16px; border: 1px solid rgba(148,163,184,0.2);
+  border-radius: 9px; background: transparent;
+  color: #94a3b8; font-size: 13px; cursor: pointer; transition: all .2s;
+}
+.btn-secondary:hover:not(:disabled) { border-color: #3b82f6; color: #93c5fd; }
+.btn-secondary:disabled { opacity: .45; cursor: not-allowed; }
+
+.batch-textarea {
+  width: 100%; background: #0f172a;
+  border: 1px solid rgba(148,163,184,0.15); border-radius: 10px;
+  color: #cbd5e1; font-family: 'JetBrains Mono', monospace; font-size: 13px;
+  padding: 12px 14px; resize: vertical; outline: none; line-height: 1.7;
+  transition: border-color .2s;
+}
+.batch-textarea:focus { border-color: #3b82f6; }
+.batch-textarea:disabled { opacity: .6; }
+.batch-textarea::placeholder { color: #475569; }
+
+.batch-footer-row { display: flex; align-items: center; justify-content: space-between; margin-top: 10px; }
+.url-count { font-size: 12px; color: #64748b; }
+.progress-wrap { display: flex; align-items: center; gap: 10px; }
+.progress-track { width: 180px; height: 5px; background: rgba(148,163,184,0.1); border-radius: 99px; overflow: hidden; }
+.progress-fill  { height: 100%; background: linear-gradient(90deg, #3b82f6, #a855f7); border-radius: 99px; transition: width .3s; }
+.progress-pct   { font-size: 12px; color: #64748b; min-width: 32px; }
+
+.spinner-sm {
+  width: 12px; height: 12px; border-radius: 50%;
+  border: 2px solid rgba(255,255,255,.3); border-top-color: #fff;
+  animation: spin .7s linear infinite; display: inline-block;
+}
+@keyframes spin { to { transform: rotate(360deg); } }
+
+/* summary */
+.batch-summary { display: flex; flex-wrap: wrap; gap: 10px; }
+.summary-pill {
+  display: flex; align-items: center; gap: 7px;
+  padding: 8px 14px; border-radius: 99px; border: 1px solid;
+  font-size: 13px; font-weight: 500;
+}
+
+/* table */
+.batch-table-wrap {
+  background: #1e293b; border: 1px solid rgba(148,163,184,0.12);
+  border-radius: 14px; overflow: hidden;
+}
+.batch-table { width: 100%; border-collapse: collapse; }
+.batch-table thead tr { background: rgba(15,23,42,0.6); }
+.batch-table th {
+  padding: 10px 14px; text-align: left;
+  font-size: 11px; font-weight: 600; color: #64748b;
+  text-transform: uppercase; letter-spacing: .07em;
+  border-bottom: 1px solid rgba(148,163,184,0.1);
+}
+.batch-table td {
+  padding: 10px 14px; font-size: 13px; color: #cbd5e1;
+  border-bottom: 1px solid rgba(148,163,184,0.06);
+  vertical-align: middle;
+}
+.batch-table tr:last-child td { border-bottom: none; }
+.batch-table tbody tr { transition: background .15s; }
+.batch-table tbody tr:hover { background: rgba(148,163,184,0.04); }
+.table-row-in { animation: rowIn .25s ease; }
+@keyframes rowIn { from { opacity:0; transform: translateX(-8px); } to { opacity:1; transform: translateX(0); } }
+
+.td-num { color: #64748b; font-size: 12px; width: 36px; }
+.td-url { font-family: 'JetBrains Mono', monospace; font-size: 12px; max-width: 280px; }
+.label-chip {
+  display: inline-block; font-size: 12px; font-weight: 500;
+  padding: 3px 10px; border-radius: 99px; border: 1px solid;
+}
+.score-cell { display: flex; align-items: center; gap: 8px; }
+.score-mini-track { width: 60px; height: 4px; background: rgba(148,163,184,0.1); border-radius: 99px; overflow: hidden; flex-shrink: 0; }
+.score-mini-fill  { height: 100%; border-radius: 99px; }
+
+.error-box {
+  padding: 14px 16px;
+  background: rgba(239,68,68,0.08); border: 1px solid rgba(239,68,68,0.25);
+  border-radius: 10px; color: #fca5a5; font-size: 13px;
+}

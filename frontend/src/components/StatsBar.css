@@ -1,0 +1,19 @@
+.stats-bar {
+  border-top: 1px solid rgba(148,163,184,0.08);
+  border-bottom: 1px solid rgba(148,163,184,0.08);
+  background: rgba(30,41,59,0.5);
+  padding: 1rem 2rem;
+  margin-bottom: 0.5rem;
+}
+.stats-inner {
+  max-width: 900px; margin: 0 auto;
+  display: flex; flex-wrap: wrap;
+  justify-content: center; gap: 2rem;
+}
+.stat-item { text-align: center; }
+.stat-value {
+  font-size: 20px; font-weight: 700;
+  background: linear-gradient(135deg, #3b82f6, #a855f7);
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+}
+.stat-label { font-size: 11px; color: #64748b; margin-top: 2px; text-transform: uppercase; letter-spacing: .06em; }
