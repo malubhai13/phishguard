@@ -1,0 +1,23 @@
+[build]
+  base = "."
+  command = "npm --prefix frontend run build"
+  publish = "frontend/build"
+  functions = "netlify/functions"
+
+[[redirects]]
+  from = "/predict"
+  to = "/.netlify/functions/api/predict"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/predict/batch"
+  to = "/.netlify/functions/api/predict/batch"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/health"
+  to = "/.netlify/functions/api/health"
+  status = 200
+  force = true

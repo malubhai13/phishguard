@@ -41,6 +41,7 @@ app = FastAPI(
     title       = "PhishGuard API",
     description = "Detects phishing / malicious URLs using ML + SHAP explainability",
     version     = "1.0.0",
+    root_path   = "/.netlify/functions/api",
 )
 
 app.add_middleware(

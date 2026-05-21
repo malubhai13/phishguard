@@ -25,3 +25,5 @@ Thumbs.db
 # Pytest
 .pytest_cache/
 node_modules/
+# Local Netlify folder
+.netlify
